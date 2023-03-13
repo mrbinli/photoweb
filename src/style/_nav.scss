@@ -1,0 +1,18 @@
+nav {
+  background-color: rgb(86, 114, 126);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  ul {
+    display: flex;
+    margin-right: 2rem;
+    li {
+      padding: 0.5rem 1rem;
+      a {
+        color: aliceblue;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

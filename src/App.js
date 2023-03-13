@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+//其他jsx的容器
+// import Nav from "./Nav";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Homepage from "./pages/Homepage";
+import About from "./pages/About";
+import Error404 from "./pages/Error404";
+import "./style/style.css";
 
+// 得到一些html內容
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="*" element={<Error404 />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
