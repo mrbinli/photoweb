@@ -1,104 +1,106 @@
 .search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0rem;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // padding: 3rem 0rem;
 
-  input,
-  button {
-    font-size: 1.5rem;
-    padding: 1.55rem;
-    color: aliceblue;
+  // input {
+  //   font-size: 1.5rem;
+  //   padding: 1.55rem;
+  //   color: aliceblue;
 
-    margin: 0.5rem;
-    border: 3px solid rgb(86, 114, 126);
-    border-radius: 35px;
-    transition: 0.3s ease-in;
-  }
-  input {
-    color: rgb(39, 39, 39);
-  }
+  //   margin: 0.5rem;
+  //   border: 3px solid rgb(86, 114, 126);
+  //   border-radius: 35px;
+  //   transition: 0.3s ease-in;
+  //   color: rgb(39, 39, 39);
+  // }
 
-  button {
-    background-color: rgb(86, 114, 126);
-    &:hover {
-      color: rgb(86, 114, 126);
-      background-color: rgb(224, 230, 233);
-      border: 3px solid rgba(86, 114, 126, 0.438);
-    }
-  }
-  // .logreg-box {
-  //   .form-box {
-  //     // display: flex;
-  //     // flex-direction: column;
-  //     // justify-content: center;
-  //     // align-items: center;
-  //     // width: 100%;
-  //     // height: 100%;
-  //     // background: transparent;
-  //     // backdrop-filter: blur(10px);
-  //     // border-top-right-radius: 10px;
-  //     // border-bottom-right-radius: 10px;
-  //     // background-color: #4949493d;
-  //     // padding: 20px 20px;
-  //     // border-radius: 30px;
-  //     .input-box {
-  //       position: relative;
-  //       width: 400px;
-  //       transition: width 0.5s ease-in-out;
-  //       transition: height 0.2s ease-in-out;
-  //       height: 50px;
-  //       min-height: 50px;
-  //       border-bottom: 2px solid #e4e4e4;
-  //       margin: 50px 0;
-  //       input {
-  //         width: 100%;
-  //         height: 100%;
-  //         background: transparent;
-  //         border: none;
-  //         outline: none;
-  //         color: #ffffff;
-  //       }
-  //       label {
-  //         position: absolute;
-  //         top: 50%;
-  //         left: 0;
-  //         transform: translateY(-50%);
-  //         font-size: 16px;
-  //         color: #ffffff73;
-  //         font-weight: 500;
-  //         pointer-events: none;
-  //         transition: 0.5s ease;
-  //       }
-  //       input:focus ~ label,
-  //       input:valid ~ label {
-  //         top: -5px;
-  //       }
-  //       textarea:focus ~ label,
-  //       textarea:valid ~ label {
-  //         top: -5px;
-  //       }
-  //     }
-  //     .loginBtn {
-  //       display: flex;
-  //       justify-content: center; //文字居中(橫的)
-  //       align-items: center; //文字在方塊中居中(直的)
-  //       width: 100px;
-  //       margin: auto;
-  //       color: black;
-  //       text-decoration: none;
-  //       background-color: rgba(226, 226, 226, 0.795);
-  //       transition: all 0.1s ease-in;
-  //       border: none;
-  //       border-radius: 10px;
-  //       &:hover {
-  //         background-color: rgb(51, 126, 113);
-  //         color: #ffffff;
-  //       }
-  //       &:active {
-  //         scale: 0.95;
-  //       }
-  //     }
+  // button {
+  //   font-size: 1.5rem;
+  //   padding: 1.55rem;
+  //   color: aliceblue;
+
+  //   margin: 0.5rem;
+  //   border: 5px solid rgb(86, 114, 126);
+  //   border-radius: 35px;
+  //   transition: 0.3s ease-in;
+  //   background-color: rgb(86, 114, 126);
+
+  //   &:hover {
+  //     color: rgb(86, 114, 126);
+  //     background-color: rgb(224, 230, 233);
+  //     border: 5px solid rgba(86, 114, 126, 0.438);
   //   }
   // }
+  .logreg-box {
+    .form-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      backdrop-filter: blur(10px);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 20px 20px;
+      border-radius: 30px;
+      .input-box {
+        position: relative;
+        width: 400px;
+        transition: width 0.5s ease-in-out;
+        transition: height 0.2s ease-in-out;
+        height: 50px;
+        min-height: 50px;
+        border-bottom: 5px solid rgb(86, 114, 126);
+        margin: 50px 0;
+        input {
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          font-size: 24px;
+          color: #000000;
+        }
+        label {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          font-size: 20px;
+          color: rgb(86, 114, 126);
+          font-weight: 500;
+          pointer-events: none;
+          transition: 0.5s ease;
+        }
+        input:focus ~ label,
+        input:valid ~ label {
+          top: -10px;
+        }
+      }
+      .loginBtn {
+        display: flex;
+        justify-content: center; //文字居中(橫的)
+        align-items: center; //文字在方塊中居中(直的)
+        width: 100px;
+        margin: auto;
+        color: black;
+        text-decoration: none;
+        background-color: rgba(226, 226, 226, 0.795);
+        transition: all 0.1s ease-in;
+        border: none;
+        border-radius: 10px;
+        &:hover {
+          background-color: rgb(51, 126, 113);
+          color: #050505;
+        }
+        &:active {
+          scale: 0.95;
+        }
+      }
+    }
+  }
 }

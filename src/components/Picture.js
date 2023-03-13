@@ -3,16 +3,18 @@ import React from "react";
 const Picture = ({ data }) => {
   return (
     <div className="picture">
-      <p>{data.photographer}</p>
+      <div className="photographer">
+        <p>{data.photographer}</p>
+      </div>
       <div className="imageContainer">
         <img src={data.src.large} alt="" />
       </div>
-      <p>
-        在此下載圖片{" "}
+      <div className="magnifier">
         <a target="_blank" href={data.src.large}>
-          點我
+          {" "}
+          <img src="magnifier.svg" alt="下載圖片" />
         </a>
-      </p>
+      </div>
     </div>
   );
 };
