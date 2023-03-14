@@ -10,8 +10,12 @@ nav {
     li {
       padding: 0.5rem 1rem;
       a {
-        color: aliceblue;
+        color: rgb(227, 235, 241);
         font-size: 1.25rem;
+        transition: 0.2s ease-in;
+      }
+      a:hover {
+        color: rgb(255, 255, 255);
       }
     }
   }

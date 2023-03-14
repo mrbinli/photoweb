@@ -4,14 +4,17 @@ const Picture = ({ data }) => {
   return (
     <div className="picture">
       <div className="photographer">
-        <p>{data.photographer}</p>
+        <a target="_blank" href={data.photographer_url}>
+          <p>{data.photographer}</p>
+        </a>
       </div>
       <div className="imageContainer">
-        <img src={data.src.large} alt="" />
+        <a target="_blank" href={data.src.large}>
+          <img src={data.src.large} alt="" />
+        </a>
       </div>
       <div className="magnifier">
-        <a target="_blank" href={data.src.large}>
-          {" "}
+        <a target="_blank" href={data.url}>
           <img src="magnifier.svg" alt="下載圖片" />
         </a>
       </div>

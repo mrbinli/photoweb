@@ -24,7 +24,7 @@ const Search = ({ search, setInput }) => {
               type="text"
               required
             />
-            <label for="exampleInputEmail1">Search</label>
+            <label for="exampleInputEmail1">請用英文單字查詢</label>
           </div>
           <button className="loginBtn" onClick={search}>
             <img src="magnifier.svg" alt="Search" />
