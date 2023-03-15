@@ -48,9 +48,10 @@ const Homepage = () => {
     setData(data.concat(result.data.photos));
   };
 
+  // eslint-disable-next-line
   useEffect(() => {
     search(initialURL);
-  }, []);
+  });
 
   //search中的函式是prop
   return (
@@ -63,8 +64,8 @@ const Homepage = () => {
       />
       <div className="pictures">
         {data &&
-          data.map((d) => {
-            return <Picture data={d} />;
+          data.map((d, index) => {
+            return <Picture data={(d, index)} />;
           })}
       </div>
       <div className="morePicture">

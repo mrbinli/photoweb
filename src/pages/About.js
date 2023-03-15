@@ -18,7 +18,7 @@ const About = () => {
         >
           <img src="link_icon.svg" alt="履歷" />
         </a>
-        <a href="">
+        <a href="https://github.com/mrbinli" target="_blank" rel="noreferrer">
           <img src="github_icon.svg" alt="Github" />
         </a>
       </div>
