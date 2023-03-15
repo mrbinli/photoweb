@@ -47,9 +47,9 @@ const Homepage = () => {
     setData(data.concat(result.data.photos));
   };
 
-  // eslint-disable-next-line
   useEffect(() => {
     search(initialURL);
+    // eslint-disable-next-line
   }, []);
 
   //search中的函式是prop
