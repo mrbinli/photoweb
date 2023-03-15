@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "https://api/*"
+  to = "https://api.pexels.com/v1/:splat"
+  status = 302
+  force = true
+  status = 302
