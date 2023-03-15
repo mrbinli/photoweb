@@ -17,11 +17,15 @@ const Homepage = () => {
   const search = async (url) => {
     //藉由axios去向pexels拿到領取圖片的連結"initialURL"，並且要附上金鑰
     //固定格式就是{headers: { Authorization: auth },}
-    let result = await axios.get(url, {
-      headers: {
-        Authorization: auth,
-      },
-    });
+    let result = await axios
+      .get(url, {
+        headers: {
+          Authorization: auth,
+        },
+      })
+      .catch((e) => {
+        console.log(e);
+      });
     // console.log(result) 確認拿到的資料的格式
     //將data改為setData並且附上result中資料的data.photos
     setData(result.data.photos);
@@ -38,11 +42,15 @@ const Homepage = () => {
         page + 1
       }`;
     }
-    let result = await axios.get(newURL, {
-      headers: {
-        Authorization: auth,
-      },
-    });
+    let result = await axios
+      .get(newURL, {
+        headers: {
+          Authorization: auth,
+        },
+      })
+      .catch((e) => {
+        console.log(e);
+      });
     setData(data.concat(result.data.photos));
   };
 
