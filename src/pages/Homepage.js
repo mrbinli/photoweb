@@ -18,7 +18,12 @@ const Homepage = () => {
     //藉由axios去向pexels拿到領取圖片的連結"initialURL"，並且要附上金鑰
     //固定格式就是{headers: { Authorization: auth },}
     let result = await axios.get(url, {
-      headers: { Authorization: auth },
+      headers: {
+        Authorization: auth,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+      },
     });
     // console.log(result) 確認拿到的資料的格式
     //將data改為setData並且附上result中資料的data.photos
@@ -36,6 +41,9 @@ const Homepage = () => {
     }
     let result = await axios.get(newURL, {
       headers: { Authorization: auth },
+      "Access-Control-Allow-Headers": "*",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
     });
     setData(data.concat(result.data.photos));
   };
@@ -43,28 +51,7 @@ const Homepage = () => {
   useEffect(() => {
     search(initialURL);
   }, []);
-  //監聽滾動
-  window.addEventListener("scroll", () => {
-    const scrollHigh = document.documentElement.scrollHeight;
-    const scrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop;
-    const clientHeight = document.documentElement.clientHeight;
-    //如果滾動到頁面底部
-    if (scrollHigh - scrollTop - clientHeight < 10) {
-      const loadingIndicator = document.getElementById("loading");
-      loadingIndicator.style.display = "block";
-      //更多圖片
-      morePiture();
-      // loadingIndicator.style.display = "none";
-      setTimeout(() => {
-        loadingIndicator.style.display = "none";
-        setTimeout(() => {
-          morePiture();
-        }, 300);
-      }, 200);
-      window.scroll(0, window.scrollY - 20);
-    }
-  });
+
   //search中的函式是prop
   return (
     <div style={{ minHeight: "100vh" }}>
