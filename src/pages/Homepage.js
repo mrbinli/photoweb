@@ -27,6 +27,12 @@ const Homepage = () => {
     //將data改為setData並且附上result中資料的data.photos
     setData(result.data.photos);
     setCurrentSearch(input);
+    let photos = result.data.photos.map((photo) => {
+      return {
+        ...photo,
+        uuid: uuidv4(),
+      };
+    });
   };
 
   const morePiture = async () => {
