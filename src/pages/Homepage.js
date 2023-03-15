@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "../components/Search";
 import Picture from "../components/Picture";
-import { v4 as uuidv4 } from "uuid";
 
 const Homepage = () => {
   //下面的資料一路到return前都是要給picture和search的
@@ -27,12 +26,6 @@ const Homepage = () => {
     //將data改為setData並且附上result中資料的data.photos
     setData(result.data.photos);
     setCurrentSearch(input);
-    let photos = result.data.photos.map((photo) => {
-      return {
-        ...photo,
-        uuid: uuidv4(),
-      };
-    });
   };
 
   const morePiture = async () => {
@@ -68,11 +61,7 @@ const Homepage = () => {
       <div className="pictures">
         {data &&
           data.map((d) => {
-            return (
-              <div key={d.uuid}>
-                <Picture data={d} />
-              </div>
-            );
+            return <Picture data={d} />;
           })}
       </div>
       <div className="morePicture">
