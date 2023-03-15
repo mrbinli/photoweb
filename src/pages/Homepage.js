@@ -24,6 +24,7 @@ const Homepage = () => {
     });
     // console.log(result) 確認拿到的資料的格式
     //將data改為setData並且附上result中資料的data.photos
+    console.log(result);
     setData(result.data.photos);
     setCurrentSearch(input);
   };

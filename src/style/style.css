@@ -172,7 +172,6 @@ nav ul li a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
 }
 .pictures .picture {
   position: relative;
