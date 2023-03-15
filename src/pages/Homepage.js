@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "../components/Search";
 import Picture from "../components/Picture";
+import { v4 as uuidv4 } from "uuid";
 
 const Homepage = () => {
   //下面的資料一路到return前都是要給picture和search的
@@ -11,8 +12,8 @@ const Homepage = () => {
   let [page, setPage] = useState(1);
   let [currentSearch, setCurrentSearch] = useState("");
   const auth = process.env.REACT_APP_SERVER_API;
-  const initialURL = "https://api.pexels.com/v1/curated?page=1&per_page=20";
-  let searchURL = `https://api.pexels.com/v1/search?query=${input}&per_page=15&per_page=1`;
+  const initialURL = "/api/curated?page=1&per_page=20";
+  let searchURL = "/api/search?query=${input}&per_page=15&per_page=1";
 
   const search = async (url) => {
     //藉由axios去向pexels拿到領取圖片的連結"initialURL"，並且要附上金鑰
@@ -61,7 +62,11 @@ const Homepage = () => {
       <div className="pictures">
         {data &&
           data.map((d) => {
-            return <Picture data={d} />;
+            return (
+              <div key={d.uuid}>
+                <Picture data={d} />
+              </div>
+            );
           })}
       </div>
       <div className="morePicture">

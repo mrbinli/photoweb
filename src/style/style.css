@@ -65,14 +65,12 @@ nav ul li a:hover {
 
 .search .logreg-box .form-box {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 20px 20px;
@@ -80,13 +78,16 @@ nav ul li a:hover {
 }
 .search .logreg-box .form-box .input-box {
   position: relative;
-  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin: 30px 20px 0 0;
   transition: width 0.5s ease-in-out;
   transition: height 0.2s ease-in-out;
   height: 50px;
   min-height: 50px;
-  border-bottom: 5px solid rgb(86, 114, 126);
-  margin: 50px 0;
+  border-bottom: 3px solid rgb(86, 114, 126);
 }
 .search .logreg-box .form-box .input-box input {
   width: 100%;
@@ -119,8 +120,8 @@ nav ul li a:hover {
   align-items: center;
   width: 80px;
   height: 80px;
+  margin: 30px 0 0 20px;
   border-radius: 15%;
-  margin: auto;
   background-color: rgb(86, 114, 126);
   border: none;
   transition: all 0.3s ease-in;
@@ -140,6 +141,20 @@ nav ul li a:hover {
 }
 .search .logreg-box .form-box .loginBtn:active img {
   transform: scale(1);
+}
+@media screen and (max-width: 600px) {
+  .search .logreg-box .form-box {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .search .logreg-box .form-box .input-box {
+    margin: 50px auto;
+  }
+  .search .logreg-box .form-box .loginBtn {
+    margin: 10px auto;
+  }
 }
 
 .footer {
@@ -297,4 +312,12 @@ nav ul li a:hover {
 
 .about .link img {
   animation-delay: 4s;
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    line-height: 220%;
+    font-size: 15px;
+    letter-spacing: 0.15rem;
+  }
 }/*# sourceMappingURL=style.css.map */

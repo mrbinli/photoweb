@@ -70,3 +70,10 @@
 .about .link img {
   animation-delay: 4s;
 }
+@media screen and (max-width: 600px) {
+  .about {
+    line-height: 220%;
+    font-size: 15px;
+    letter-spacing: 0.15rem;
+  }
+}

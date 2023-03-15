@@ -36,26 +36,28 @@
   .logreg-box {
     .form-box {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%;
       background: transparent;
-      backdrop-filter: blur(10px);
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
       padding: 20px 20px;
       border-radius: 30px;
       .input-box {
         position: relative;
-        width: 400px;
+        display: flex;
+        justify-content: center; //文字居中(橫的)
+        align-items: center;
+        width: 250px;
+        margin: 30px 20px 0 0;
         transition: width 0.5s ease-in-out;
         transition: height 0.2s ease-in-out;
         height: 50px;
         min-height: 50px;
-        border-bottom: 5px solid rgb(86, 114, 126);
-        margin: 50px 0;
+        border-bottom: 3px solid rgb(86, 114, 126);
         input {
           width: 100%;
           height: 100%;
@@ -88,8 +90,8 @@
         align-items: center; //文字在方塊中居中(直的)
         width: 80px;
         height: 80px;
+        margin: 30px 0 0 20px;
         border-radius: 15%;
-        margin: auto;
         background-color: rgb(86, 114, 126);
         border: none;
         transition: all 0.3s ease-in;
@@ -108,6 +110,22 @@
           img {
             transform: scale(1);
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .logreg-box {
+      .form-box {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .input-box {
+          margin: 50px auto;
+        }
+        .loginBtn {
+          margin: 10px auto;
         }
       }
     }
