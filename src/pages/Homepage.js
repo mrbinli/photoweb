@@ -47,10 +47,10 @@ const Homepage = () => {
     setData(data.concat(result.data.photos));
   };
 
+  // eslint-disable-next-line
   useEffect(() => {
-    // eslint-disable-next-line
-    search(initialURL), [];
-  });
+    search(initialURL);
+  }, []);
 
   //search中的函式是prop
   return (
