@@ -239,7 +239,6 @@ nav ul li a:hover {
 .pictures .picture:hover .magnifier:hover {
   transform: scale(1.2);
 }
-
 @media screen and (max-heigth: 900px) {
   .pictures .picture .photographer {
     position: absolute;
@@ -272,29 +271,8 @@ nav ul li a:hover {
     opacity: 0;
     transition: all 0.3s ease-in;
   }
-  .pictures .picture .magnifier img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-  }
-  .pictures .picture:hover .photographer {
-    opacity: 1;
-  }
-  .pictures .picture:hover .imageContainer img {
-    transform: scale(1.1);
-    filter: brightness(85%);
-  }
-  .pictures .picture:hover .imageContainer + .magnifier,
-  .pictures .picture:hover .magnifier {
-    opacity: 1;
-  }
-  .pictures .picture:hover .magnifier:hover {
-    transform: scale(1.2);
-  }
 }
+
 .about {
   display: flex;
   flex-direction: column;

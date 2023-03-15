@@ -74,9 +74,7 @@
       transform: scale(1.2);
     }
   }
-}
-@media screen and (max-heigth: 900px) {
-  .pictures {
+  @media screen and (max-heigth: 900px) {
     .picture {
       .photographer {
         position: absolute;
@@ -107,33 +105,6 @@
         position: absolute;
         opacity: 0;
         transition: all 0.3s ease-in;
-        img {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 90%;
-          height: 90%;
-        }
-      }
-    }
-    .picture:hover {
-      .photographer {
-        opacity: 1;
-      }
-      .imageContainer {
-        img {
-          transform: scale(1.1);
-
-          filter: brightness(85%);
-        }
-      }
-      .imageContainer + .magnifier,
-      .magnifier {
-        opacity: 1;
-      }
-      .magnifier:hover {
-        transform: scale(1.2);
       }
     }
   }
