@@ -34,7 +34,9 @@ const Homepage = () => {
     if (currentSearch === "") {
       newURL = `/api/curated?page=${page + 1}&per_page=15`;
     } else {
-      newURL = `/api/search?query=${currentSearch}&per_page=15&per_page=1`;
+      newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&page=${
+        page + 1
+      }`;
     }
     let result = await axios.get(newURL, {
       headers: {
