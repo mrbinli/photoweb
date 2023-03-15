@@ -1,1 +1,2 @@
 /api/* https://api.pexels.com/v1/:splat 302
+/*    https://binliphotowall.netlify.app/ 200
