@@ -13,6 +13,7 @@ const About = () => {
       <div className="link">
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.cakeresume.com/s--W81v9NUdEd8pWQcTOx00sw--/mrbinli"
         >
           <img src="link_icon.svg" alt="履歷" />
