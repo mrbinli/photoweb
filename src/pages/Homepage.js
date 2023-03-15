@@ -12,7 +12,7 @@ const Homepage = () => {
   let [currentSearch, setCurrentSearch] = useState("");
   const auth = process.env.REACT_APP_SERVER_API;
   const initialURL = "/api/curated?page=1&per_page=20";
-  let searchURL = "/api/search?query=${input}&per_page=15&per_page=1";
+  let searchURL = `/api/search?query=${input}&per_page=15&per_page=1`;
 
   const search = async (url) => {
     //藉由axios去向pexels拿到領取圖片的連結"initialURL"，並且要附上金鑰
@@ -32,9 +32,9 @@ const Homepage = () => {
     let newURL;
     setPage(page + 1);
     if (currentSearch === "") {
-      newURL = `https://api.pexels.com/v1/curated?page=${page + 1}&per_page=15`;
+      newURL = `/api/curated?page=${page + 1}&per_page=15`;
     } else {
-      newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&per_page=1`;
+      newURL = `/api/search?query=${currentSearch}&per_page=15&per_page=1`;
     }
     let result = await axios.get(newURL, {
       headers: {
