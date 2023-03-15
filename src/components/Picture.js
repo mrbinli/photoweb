@@ -1,10 +1,9 @@
 import React from "react";
 
-const Picture = ({ data, index }) => {
+const Picture = ({ data }) => {
   return (
     <div className="picture">
       <div className="photographer">
-        <p>{index}</p>
         <a target="_blank" rel="noreferrer" href={data.photographer_url}>
           <p>{data.photographer}</p>
         </a>

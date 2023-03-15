@@ -20,9 +20,6 @@ const Homepage = () => {
     let result = await axios.get(url, {
       headers: {
         Authorization: auth,
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
       },
     });
     // console.log(result) 確認拿到的資料的格式
@@ -40,17 +37,16 @@ const Homepage = () => {
       newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&per_page=1`;
     }
     let result = await axios.get(newURL, {
-      headers: { Authorization: auth },
-      "Access-Control-Allow-Headers": "*",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+      headers: {
+        Authorization: auth,
+      },
     });
     setData(data.concat(result.data.photos));
   };
 
-  // eslint-disable-next-line
   useEffect(() => {
-    search(initialURL);
+    // eslint-disable-next-line
+    search(initialURL), [];
   });
 
   //search中的函式是prop
@@ -64,8 +60,8 @@ const Homepage = () => {
       />
       <div className="pictures">
         {data &&
-          data.map((d, index) => {
-            return <Picture data={(d, index)} />;
+          data.map((d) => {
+            return <Picture data={d} />;
           })}
       </div>
       <div className="morePicture">
